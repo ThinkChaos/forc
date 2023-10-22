@@ -214,13 +214,13 @@ def mixAndSortGlyphs(glyphs):
 
         glyphStruct["all"].append(g)
 
-        if g.glyphType is not "alias":
+        if g.glyphType != "alias":
             glyphStruct["img_empty"].append(g)
 
-        if g.glyphType is "img":
+        if g.glyphType == "img":
             glyphStruct["img"].append(g)
 
-        if g.glyphType is "empty":
+        if g.glyphType == "empty":
             glyphStruct["empty"].append(g)
 
 

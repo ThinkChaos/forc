@@ -65,7 +65,7 @@ class Img:
         Loads and returns a hexdump of the image object's file on-demand.
         """
 
-        if self.type is "svg":
+        if self.type == "svg":
             raise ValueError(f"Hexdump of an SVG image was attempted. You can't hexdump SVG images in forc.")
 
         try:

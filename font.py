@@ -90,7 +90,7 @@ class TTFont:
             # an empty loca table if there's no glyf table (CBDT/CBLC
             # fonts shouldnt have glyf tables.)
 
-            if glyphFormat is not "CBx":
+            if glyphFormat != "CBx":
                 log.out('[loca] ', 36, newline=False)
                 self.tables["loca"] = tables.loca.loca()
 
@@ -152,7 +152,7 @@ class TTFont:
             # table dependencies and the TTX compiler.
             #
             # CBDT/CBLC doesn't use glyf at all
-            if glyphFormat is not "CBx":
+            if glyphFormat != "CBx":
                 log.out('[glyf] ', 36, newline=False)
                 self.tables["glyf"] = tables.glyf.glyf(m, glyphs)
 

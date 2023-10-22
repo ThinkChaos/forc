@@ -27,7 +27,7 @@ class glyf:
         for g in self.glyphs:
 
             # if it's not a whitespace character or a service glyph....
-            if g.glyphType is "empty":
+            if g.glyphType == "empty":
                 glyf.append(Element("TTGlyph", {"name": g.name() }))
 
 

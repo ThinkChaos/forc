@@ -111,12 +111,12 @@ class SbitLineMetrics:
 
         localScale = getLocalScale(metrics)
 
-        if direction is 'hori':
+        if direction == 'hori':
             self.ascender =  round( (metrics['yMax'] / localScale) * bitScale )
             self.descender = round( (metrics['yMin'] / localScale) * bitScale )
             self.widthMax =  round( (metrics['width'] / localScale) * bitScale )
 
-        elif direction is 'vert':
+        elif direction == 'vert':
             self.ascender =  round( (metrics['yMax'] / localScale) * bitScale )
             self.descender = round( (metrics['yMin'] / localScale) * bitScale )
             self.widthMax =  round( (metrics['width'] / localScale) * bitScale )
